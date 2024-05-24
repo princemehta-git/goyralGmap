@@ -1,0 +1,43 @@
+{
+	"manifest_version": 3,
+	"name": "Goyral Business Extractor",
+	"description": "Goyral Business Extractor G Map Data Extractor tool is a lightweight and powerful G Maps software for lead generation.",
+	"version": "3.0.2",
+	"permissions": [
+		"tabs",		
+		"storage",
+		"downloads",		
+		"notifications"
+	],
+	"host_permissions" : [
+		"https://www.google.com/*",
+		"*://goyral.com/*"
+	],
+	"icons": {
+		"128": "images/icon_128.png",
+		"48":"images/icon_48.png",
+		"32":"images/icon_32.png",
+		"16":"images/icon_16.png"
+	},
+	"background": {
+		"service_worker": "worker.js",
+		"type": "module"
+	},
+	
+	"action": {
+		"default_icon": {
+			"128": "images/icon_128.png",
+			"48":"images/icon_48.png",
+			"32":"images/icon_32.png",
+			"16":"images/icon_16.png"
+		},
+		"default_popup": "html/index.html",
+		"default_title": "Goyral Map Extractor"
+	},
+	"content_scripts": [{
+		"js": ["js/progress.js" , "js/config.js", "js/content.js" ],
+		"css":["css/bootstrap.min.css", "css/data.css"],
+		"matches": ["https://www.google.com/search?tbm=*"],
+		"run_at": "document_end"
+	}]
+}

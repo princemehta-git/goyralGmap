@@ -1,0 +1,23 @@
+th{
+    white-space: nowrap;
+    font-weight: bold;
+    background-color: #217346!important;
+    border-right: 1px solid white;
+    color: white;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+
+
+td.phone {
+    white-space: nowrap;
+}
+
+#show-record > a{
+    color: #0000ee;
+}
+
+.business-name, .address{
+    min-width: 250px;
+}
